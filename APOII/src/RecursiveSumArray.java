@@ -3,7 +3,9 @@ public class RecursiveSumArray {
 
     public int sumArray(int[] array, int n){
         int result = 0;
+        // pregunta, por que el caso base es si n es menor o igual a cero?
         if(n <= 0){
+            // por que en el caso base le sumo cero?
             result += 0;
         } else {
             result += sumArray(array, n-1) + array[n-1];
@@ -11,9 +13,10 @@ public class RecursiveSumArray {
         return result;
     }
 
-    public static void main(String args[]){
+    public static void main(String[] args){
 
         RecursiveSumArray r = new RecursiveSumArray();
+        // por que cuando paso como parametro array.length-1 y en el metodo hago + array[n] no me da lo mismo?
         int result = r.sumArray(array, array.length);
         System.out.println(result);
     }
