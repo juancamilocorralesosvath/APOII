@@ -4,14 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0ee48da3-3d49-4eba-9b58-ade3d1e43935" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/APOII/src/Average.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/APOII/src/Position.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/APOII/src/StringReverser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/APOII/src/RecursiveSumArray.java" beforeDir="false" afterPath="$PROJECT_DIR$/APOII/src/RecursiveSumArray.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/APOII/RecursiveSumArray.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/APOII/RecursiveSumArray.class" afterDir="false" />
-    </list>
+    <list default="true" id="0ee48da3-3d49-4eba-9b58-ade3d1e43935" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -100,7 +93,7 @@
       <workItem from="1691545789779" duration="2901000" />
       <workItem from="1691549336386" duration="20000" />
       <workItem from="1691549451734" duration="143000" />
-      <workItem from="1691713251483" duration="8507000" />
+      <workItem from="1691713251483" duration="8679000" />
     </task>
     <servers />
   </component>
