@@ -8,7 +8,7 @@ public class RecursiveSumArray {
             // por que en el caso base le sumo cero?
             result += 0;
         } else {
-            result += sumArray(array, n-1) + array[n-1];
+            result += sumArray(array, n-1) + array[n];
         }
         return result;
     }
@@ -17,7 +17,7 @@ public class RecursiveSumArray {
 
         RecursiveSumArray r = new RecursiveSumArray();
         // por que cuando paso como parametro array.length-1 y en el metodo hago + array[n] no me da lo mismo?
-        int result = r.sumArray(array, array.length);
+        int result = r.sumArray(array, array.length-1);
         System.out.println(result);
     }
 

@@ -4,7 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0ee48da3-3d49-4eba-9b58-ade3d1e43935" name="Changes" comment="" />
+    <list default="true" id="0ee48da3-3d49-4eba-9b58-ade3d1e43935" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/APOII/src/RecursiveSumArray.java" beforeDir="false" afterPath="$PROJECT_DIR$/APOII/src/RecursiveSumArray.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/APOII/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/APOII/src/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/APOII/src/UserController.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -39,24 +45,28 @@
     <option name="showExcludedFiles" value="false" />
     <option name="showModules" value="false" />
     <option name="sortByType" value="true" />
-    <option name="sortKey" value="BY_TYPE" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Juan Camilo/Desktop/MENU/JUAN/PROJECTS/ICESI/tercer_semestre/APOII&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/Users/1007489003/Desktop/APOII",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\1007489003\Desktop\APOII\APOII\src" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -93,7 +103,8 @@
       <workItem from="1691545789779" duration="2901000" />
       <workItem from="1691549336386" duration="20000" />
       <workItem from="1691549451734" duration="143000" />
-      <workItem from="1691713251483" duration="8679000" />
+      <workItem from="1691713251483" duration="8507000" />
+      <workItem from="1691763348831" duration="4812000" />
     </task>
     <servers />
   </component>
