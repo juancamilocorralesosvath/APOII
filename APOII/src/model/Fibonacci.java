@@ -1,3 +1,5 @@
+package model;
+
 public class Fibonacci {
     public Fibonacci() {
         // sn = sn-1 + sn-2 teniendo n1= 1 n2= 2

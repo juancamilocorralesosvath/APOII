@@ -1,3 +1,8 @@
+package model;
+
+import model.Central;
+import model.DialogoInsertarPaciente;
+
 import javax.swing.*;
 import java.util.ArrayList;
 

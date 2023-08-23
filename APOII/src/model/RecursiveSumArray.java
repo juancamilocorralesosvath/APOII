@@ -1,3 +1,5 @@
+package model;
+
 public class RecursiveSumArray {
     static int[] array = {12, -1, 15, 2, 4, 14};
 

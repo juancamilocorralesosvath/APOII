@@ -1,3 +1,5 @@
+package model;
+
 public class Position {
 
     public int positionInArray(int[] array, int number, int initializer){

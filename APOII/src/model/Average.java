@@ -1,3 +1,5 @@
+package model;
+
 public class Average {
 
     public int recursiveAverage(int[] array, int n){
