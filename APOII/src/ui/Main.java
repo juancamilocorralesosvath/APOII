@@ -1,5 +1,6 @@
 package ui;
 
+import model.User;
 import model.UserController;
 
 import java.util.Scanner;
