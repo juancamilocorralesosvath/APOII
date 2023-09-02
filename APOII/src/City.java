@@ -4,9 +4,9 @@ public class City {
 
     // finds and returns a ride given its code
     // if it is not found, returns null.
-    public Ride searchRide(int code){
+/*    public Ride searchRide(int code){
 
-    }
+    }*/
 
     // adds a new ride to the city
     // taking into account that

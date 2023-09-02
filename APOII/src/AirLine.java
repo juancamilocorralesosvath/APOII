@@ -1,9 +1,11 @@
+import java.util.Date;
+
 public class AirLine {
 
     // returns the city or null.
-    public City getCity(String cityName){
+/*    public City getCity(String cityName){
 
-    }
+    }*/
 
     // @throws AirLineException
     public void addCity(String name){
@@ -11,9 +13,9 @@ public class AirLine {
     }
 
     // searches for the city before the given city
-    private City locatePrevious(String name){
+  /*  private City locatePrevious(String name){
 
-    }
+    }*/
 
     // @throws AirLineException
     public void deleteCity(String name){

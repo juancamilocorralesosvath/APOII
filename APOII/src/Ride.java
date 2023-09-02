@@ -20,41 +20,41 @@ public class Ride {
     // --------------------------
     // METHODS
     // ------------------------
-    private void initializeChairs(){
+ /*   private void initializeChairs(){
         chairs = new Chair[ROWS][LETTERS.length];
 
         for (int i = 0; i < ROWS; i++) {
             for (int j = 0; j < LETTERS.length; j++) {
-                chairs[i][j] = new Chair(i, LETTERS[j]);
+               chairs[i][j] = new Chair(i, LETTERS[j]);
             }
 
         }
-    }
+    }*/
 
     // metodo que permite cambiar el formato de una fecha
-    public String formatoFecha(String cadena){
+ /*   public String formatoFecha(String cadena){
         SimpleDateFormat formato1 = new SimpleDateFormat("dd.MMM.yy 'at' HH:mm:ss");
         Date fecha = formato1.parse(cadena);
 
         SimpleDateFormat formato2 = new SimpleDateFormat("yyyy-MM-dd HH:mm");
         return formato2.format(fecha);
-    }
+    }*/
 
-    public Date createDate(int year, int month, int day, int hours, int minutes){
+  /*  public Date createDate(int year, int month, int day, int hours, int minutes){
 
-    }
+    }*/
 
-    public Chair getChair(String chairName){
+  /*  public Chair getChair(String chairName){
 
-    }
+    }*/
 
-    public Date getDate(){
-
-    }
-
-    public String getDateHour(){
+ /*   public Date getDate(){
 
     }
+*/
+/*    public String getDateHour(){
+
+    }*/
 
     // asigna una silla al pasajero que se recie comom parametro,
     // si el pasajero con esa cedula ya tiene una reserva en el mismo vuelo,
