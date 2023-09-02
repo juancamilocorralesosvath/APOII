@@ -80,9 +80,9 @@ public class Main {
     public int showMenuAndGetOption() {
         int input;
         System.out.println("\n\nMenu de la aplicación, digite una opciOn\n"+
-                "(1) agregar User\n" +
-                "(2) buscar User\n" +
-                "(3) eliminar User\n"+
+                "(1) agregar model.User\n" +
+                "(2) buscar model.User\n" +
+                "(3) eliminar model.User\n"+
                 "(4) opciOn 4\n"+
                 "(5) opciOn 5\n"+
                 "(0) Para salir"
