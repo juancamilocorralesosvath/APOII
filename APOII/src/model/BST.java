@@ -151,6 +151,57 @@ public class BST {
 
     }
 
+    /*
+    * ojo: con el poder de Dios preguntarle al profesor acerca del metodo de calcular el ancho,
+    * mi idea era esta:
+    *  public String inOrder(){
+        if(root == null){
+            return "tree is empty";
+        }else {
+            return inOrder(this.root);
+        }
+    }
+
+    private String inOrder(TreeNode current){
+        if(current == null){
+            return "";
+        }else{
+            return inOrder(current.getLeft()) + " " + current.getKey() + " " + inOrder(current.getRight());
+        }
+    }
+    public int getWidth(){
+        String mensaje = "Los nodos hoja son los siguientes: ";
+        int contador = 0;
+        return getWidth(this.root, contador, mensaje);
+    }
+    private int getWidth(TreeNode current, int contador, String cadena){
+        // necesito implementar la suma izquierda y la suma derecha
+        // de cada uno de los nodos, pero no se como implementar esto.
+        return 1;
+    }
+    private int sumaIzquierda(TreeNode current, int contador){
+        if(current.getLeft() == null && current.getRight()==null){
+            contador++;
+        }
+        if (current == null){
+            return contador;
+        } else{
+            return sumaIzquierda(current.getLeft(), contador);
+        }
+    }
+
+    private int sumaDerecha(TreeNode current, int contador){
+        if(current.getLeft() == null && current.getRight()==null){
+            contador++;
+        }
+        if (current == null){
+            return contador;
+        } else{
+            return sumaDerecha(current.getRight(), contador);
+        }
+    }
+    * */
+
 }
 
 
