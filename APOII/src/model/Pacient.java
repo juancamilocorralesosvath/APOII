@@ -1,3 +1,5 @@
+package model;
+
 public class Pacient {
 
     // --------------------------
@@ -51,7 +53,7 @@ public class Pacient {
         return this.next;
     }
 
-    // this method receives a Pacient parameter
+    // this method receives a model.Pacient parameter
     // which alters the next item changing it for another.
     // now it will point to the pacient that comes as a parameter.
     public void changeNext(Pacient pacient) {

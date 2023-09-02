@@ -1,5 +1,7 @@
-import java.util.Scanner;
+package ui;
 
+import java.util.Scanner;
+import model.*;
 public class Main {
 
     private UserController controller;
