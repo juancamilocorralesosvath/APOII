@@ -1,5 +1,7 @@
 package model;
 
+import exception.EmptyBSTException;
+
 public class BST {
 
     private TreeNode root;
@@ -43,19 +45,24 @@ public class BST {
     * el metodo inorder, lo que significa es que voy a recorrer el arbol
     * o imprimirlo desde el menor valor hasta el mayor valor.
     * */
-    public String inOrder(){
-        if(root == null){
-            return "tree is empty";
-        }else {
-            return inOrder(this.root);
+    public String inOrder() {
+        String result = "";
+        try{
+            result = inOrder(this.root);
+        }catch (EmptyBSTException e){
+            System.out.println("exception has been catched");
         }
+
+        return result;
     }
 
     // este metodo inorder lo podemos usar como base
     // para armar un arreglo ordenado y luego
     // hacer un arbol balanceado con el metodo add in group. de la manera como esta en el comentario:
-    private String inOrder(TreeNode current){
-        if(current == null){
+    private String inOrder(TreeNode current) throws EmptyBSTException{
+        if(this.root == null){
+            throw new EmptyBSTException("tree is empty");
+        }else if(current == null){
             return " null ";
         }else{
             //metodo para generar un arreglo ordenado:
@@ -99,9 +106,15 @@ public class BST {
     * */
 
     public void delete(Integer goal){
-        delete(null, this.root, goal);
+        try{
+            return delete(null, this.root, goal);
+        }catch (EmptyBSTException e){
+
+        }
+
     }
-    private void delete(TreeNode parent,TreeNode current, Integer goal){
+    // el metodo es suceptible de lanzar la excepcion.
+    private void delete(TreeNode parent,TreeNode current, Integer goal) {
 
         if(current == null){
             // el nodo no esta en el arbol
