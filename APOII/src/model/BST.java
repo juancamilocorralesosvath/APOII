@@ -213,6 +213,7 @@ public class BST {
     /*
     * el metodo addingroup toma un arreglo
     * y a partir de el genera un arbol balanceado.
+    * ojo: el arreglo debe estar ordenado de menor a mayor.
     * */
     public void addInGroup(Integer[] arr){
         int start = 0;
