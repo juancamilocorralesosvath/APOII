@@ -5,7 +5,7 @@ public class BST {
     private TreeNode root;
 
     // trigger method
-    public void add(Integer key, TreeNode current){
+    public void add(Integer key){
         TreeNode node = new TreeNode(key);
         if(root == null){
             root = node;
@@ -51,10 +51,18 @@ public class BST {
         }
     }
 
+    // este metodo inorder lo podemos usar como base
+    // para armar un arreglo ordenado y luego
+    // hacer un arbol balanceado con el metodo add in group. de la manera como esta en el comentario:
     private String inOrder(TreeNode current){
         if(current == null){
             return " null ";
-        }else{ // darle un repaso a esto... por favor.
+        }else{
+            //metodo para generar un arreglo ordenado:
+            // llamado por la izquierda
+            // agregar al arreglo
+            // llamado por la derecha
+            // return array
             return inOrder(current.getLeft()) + " " + current.getKey() + " " + inOrder(current.getRight());
         }
     }
@@ -202,8 +210,27 @@ public class BST {
     }
     * */
 
-    public void addInGroup(){
+    /*
+    * el metodo addingroup toma un arreglo
+    * y a partir de el genera un arbol balanceado.
+    * */
+    public void addInGroup(Integer[] arr){
+        int start = 0;
+        int end = arr.length-1;
 
+    }
+
+    private void addInGroup(Integer[] arr, int start, int end){
+        if(start <= end){
+            int mid = (start + end) / 2;
+            add(arr[mid]);
+
+            // left
+            addInGroup(arr, start, mid-1);
+
+            // right
+            addInGroup(arr, mid+1, end);
+        }
     }
 
 }
