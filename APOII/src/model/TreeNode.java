@@ -1,19 +1,19 @@
 package model;
 
 public class TreeNode {
-    private String key;
+    private Integer key;
     private TreeNode right;
     private TreeNode left;
 
-    public TreeNode(String key){
+    public TreeNode(Integer key){
         this.key = key;
     }
 
-    public String getKey() {
+    public Integer getKey() {
         return key;
     }
 
-    public void setKey(String key) {
+    public void setKey(Integer key) {
         this.key = key;
     }
 
@@ -34,6 +34,6 @@ public class TreeNode {
     }
 
     public String toString(){
-        return this.key;
+        return this.key+"";
     }
 }

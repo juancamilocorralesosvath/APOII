@@ -5,7 +5,7 @@ public class BST {
     private TreeNode root;
 
     // trigger method
-    public void add(String key, TreeNode current){
+    public void add(Integer key, TreeNode current){
         TreeNode node = new TreeNode(key);
         if(root == null){
             root = node;
@@ -90,10 +90,10 @@ public class BST {
     * }
     * */
 
-    public void delete(String goal){
+    public void delete(Integer goal){
         delete(null, this.root, goal);
     }
-    private void delete(TreeNode parent,TreeNode current, String goal){
+    private void delete(TreeNode parent,TreeNode current, Integer goal){
 
         if(current == null){
             // el nodo no esta en el arbol
@@ -201,6 +201,10 @@ public class BST {
         }
     }
     * */
+
+    public void addInGroup(){
+
+    }
 
 }
 
