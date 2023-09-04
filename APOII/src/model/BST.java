@@ -106,12 +106,7 @@ public class BST {
     * */
 
     public void delete(Integer goal){
-        try{
-            return delete(null, this.root, goal);
-        }catch (EmptyBSTException e){
-
-        }
-
+        delete(null, this.root, goal);
     }
     // el metodo es suceptible de lanzar la excepcion.
     private void delete(TreeNode parent,TreeNode current, Integer goal) {
