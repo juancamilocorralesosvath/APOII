@@ -1,7 +1,9 @@
 package ui;
 
+import model.User;
+import model.UserController;
+
 import java.util.Scanner;
-import model.*;
 public class Main {
 
     private UserController controller;
@@ -79,6 +81,7 @@ public class Main {
      * del valor ingresado por el usuario
      * @return input, int es la opciOn elegida por el usuario
      */
+
     public int showMenuAndGetOption() {
         int input;
         System.out.println("\n\nMenu de la aplicación, digite una opciOn\n"+
@@ -88,12 +91,36 @@ public class Main {
                 "(4) opciOn 4\n"+
                 "(5) opciOn 5\n"+
                 "(0) Para salir"
-
         );
         input = sc.nextInt();
         sc.nextLine();
         return input;
     }
 
+    /*
+    * ojo: las excepciones runtime exception no necesito controlarlas explicitamente ni declararlas explicitamente.
+    * las que heredan de ella tampoco
+    * las que heredan de excpetion es necesario decir explicitamente que la voy a usar y manejarla
+    *
+    * */
+
+    /*
+    *
+    * try{
+    *   division de enteros
+    * }catch(InputMismatchException ime){
+    *
+    *   si lo recibido no es numerico
+    *
+    * }catch(ArithmeticException a){
+    *     si hay una division por cero
+    * }
+    *
+    * puedo escribir lo mismo de arriba de la siguiente manera(syntactic sugar):
+    * catch(InputMismatchException | ArithmeticException ex){
+    *   if(ex instanceof InputMismatchException) Sysout("el valor ingresado no es numerico");
+    *   else Sysout("division por cero")
+    * }
+    * */
 
 }

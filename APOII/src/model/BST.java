@@ -1,6 +1,7 @@
 package model;
 
 import exception.EmptyBSTException;
+import exception.NodeWithSameKeyException;
 
 public class BST {
 
@@ -36,6 +37,7 @@ public class BST {
             }
         } else{
             // caso en el que los valores de los nodos son iguales
+            throw new NodeWithSameKeyException("there already is a node with this key");
         }
     }
 
@@ -113,7 +115,6 @@ public class BST {
 
         if(current == null){
             // el nodo no esta en el arbol
-
         }
 
         // cuando encontramos el nodo
