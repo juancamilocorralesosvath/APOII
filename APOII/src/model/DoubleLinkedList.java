@@ -1,3 +1,8 @@
+package model;
+// bueno, atencion: lo que vamos a hacer es tomar este
+// codigo como base para hacer la lista enlazada sencilla generica
+// no se por que no tengo el codigo de la lista enlazada sencilla...
+
 public class DoubleLinkedList {
     private Node head;
     private Node tail;

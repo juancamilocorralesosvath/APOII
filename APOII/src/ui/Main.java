@@ -1,18 +1,18 @@
 package ui;
 
-import model.User;
-import model.UserController;
+import model.*;
 
 import java.util.Scanner;
 public class Main {
 
-    private UserController controller;
+    private GenericLinkedList<String> genericLinkedList;
     private Scanner sc;
 
     public Main(){
-        controller = new UserController();
+        // quiero ver si de esta manera lo infiere
+        genericLinkedList = new GenericLinkedList<>();
         sc = new Scanner(System.in);
-        initUsers();
+       // initUsers();
     }
 
     public static void main(String[] args) {
@@ -27,70 +27,40 @@ public class Main {
             m.answerOption(option);
         }while (option !=0);
     }
-
     /**
      * Metodo que se encarga de llamar a los mEtodos que resuelven cada uno de los
      * requerimientos de la aplicaciOn
-     * @param userOption, int es el nUmero ingresado por el usuario (no ha sido validado)
      */
     public void answerOption(int userOption) {
         switch (userOption) {
             case 0:
-                System.out.println("cerrando la aplicaciOn, bye");
+                System.out.println("closing app...");
                 break;
             case 1:
-                addUser();
+                addNode();
                 break;
             case 2:
-                searchUser();
+                printList();
                 break;
-            case 3:
-                deleteUser();
-                break;
-            case 4:
-                printUsers();
-                break;
-            case 5:
-
         }
     }
-    private void deleteUser() {
-
+    public void addNode(){
+        System.out.println("please specify what do you want to add: ");
+        String ans = sc.nextLine();
+        genericLinkedList.add(ans);
     }
-
-    private void searchUser() {
-
+    public void printList(){
+        System.out.println(genericLinkedList.printList());
     }
-
-    private void addUser() {
-
-    }
-
-    private void initUsers(){
-        for (int i = 0; i< 10; i++){
-            controller.addLastUser(new User(i));
-        }
-    }
-
-    private void printUsers(){
-        System.out.println(controller.print());
-    }
-
     /**
-     * Metodo que muestra el menu de la aplicaciOn, a este metod hace falta implementar la validaciOn
-     * del valor ingresado por el usuario
-     * @return input, int es la opciOn elegida por el usuario
+     * Metodo que muestra el menu de la aplicacion
      */
-
     public int showMenuAndGetOption() {
         int input;
-        System.out.println("\n\nMenu de la aplicación, digite una opciOn\n"+
-                "(1) agregar model.User\n" +
-                "(2) buscar model.User\n" +
-                "(3) eliminar model.User\n"+
-                "(4) opciOn 4\n"+
-                "(5) opciOn 5\n"+
-                "(0) Para salir"
+        System.out.println("\n app menu"+
+                "\n (1) add node" +
+                "\n (2) print list"+
+                "\n(0) exit"
         );
         input = sc.nextInt();
         sc.nextLine();
@@ -98,6 +68,7 @@ public class Main {
     }
 
     /*
+    * comentario acerca de las excepciones:
     * ojo: las excepciones runtime exception no necesito controlarlas explicitamente ni declararlas explicitamente.
     * las que heredan de ella tampoco
     * las que heredan de excpetion es necesario decir explicitamente que la voy a usar y manejarla
