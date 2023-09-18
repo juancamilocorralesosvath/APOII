@@ -6,6 +6,7 @@
       <sourceFolder url="file://$MODULE_DIR$/APOII/testing" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/APOII/testing/src" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/APOII/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/APOII/Persistencia/src" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
