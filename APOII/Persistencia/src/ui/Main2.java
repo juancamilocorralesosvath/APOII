@@ -42,23 +42,24 @@ public class Main2 {
 
         try {
             System.out.println(" que pasa?");
-            m.listToSave.load();
+            m.listToLoad.load();
         }catch (IOException e){
-            // por qué me sale error?
+           e.printStackTrace(); // por qué me sale error?
             System.out.println("error...");
         }
 
         try {
             System.out.println(" que pasa?");
-            m.listToSave.load();
+            m.listToSave.loadFromGson();
         }catch (IOException e){
-            // por qué me sale error?
+            e.printStackTrace();// por qué me sale error?
             System.out.println("error...");
         }
         System.out.println("ejemplo json:");
         try {
             m.listToSave.saveToGson();
         }catch (IOException e){
+            e.printStackTrace();
             System.out.println("exception building json");
         }
     }

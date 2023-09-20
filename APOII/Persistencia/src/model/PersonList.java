@@ -64,8 +64,8 @@ public class PersonList {
     }
     public void load() throws IOException {
         FileInputStream fis = new FileInputStream(result);
-
         BufferedReader reader = new BufferedReader(new InputStreamReader(fis));
+
         String content = "";
         String line = "";
         while ( (line = reader.readLine()) != null){
