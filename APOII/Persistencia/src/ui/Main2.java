@@ -2,6 +2,7 @@ package ui;
 
 import model.Person;
 import model.PersonList;
+import model.Pet;
 
 import java.io.IOException;
 
@@ -29,6 +30,8 @@ public class Main2 {
         Person p6 = new Person("maria", "123", 1935);
         Person p7 = new Person("pedro", "123", 1935);
 
+        p1.setPet(new Pet("firulais", 5));
+
         m.listToSave.getPeople().add(p1);
         m.listToSave.getPeople().add(p2);
         m.listToSave.getPeople().add(p3);
@@ -38,10 +41,25 @@ public class Main2 {
         m.listToSave.getPeople().add(p7);
 
         try {
+            System.out.println(" que pasa?");
             m.listToSave.load();
         }catch (IOException e){
+            // por qué me sale error?
             System.out.println("error...");
         }
 
+        try {
+            System.out.println(" que pasa?");
+            m.listToSave.load();
+        }catch (IOException e){
+            // por qué me sale error?
+            System.out.println("error...");
+        }
+        System.out.println("ejemplo json:");
+        try {
+            m.listToSave.saveToGson();
+        }catch (IOException e){
+            System.out.println("exception building json");
+        }
     }
 }

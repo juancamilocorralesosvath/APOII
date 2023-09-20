@@ -4,10 +4,19 @@ public class Person {
     private String name;
     private String ID;
     private int year;
+    private Pet pet;
     public Person(String name, String ID, int year){
         this.name = name;
         this.ID = ID;
         this.year = year;
+    }
+
+    public Pet getPet() {
+        return pet;
+    }
+
+    public void setPet(Pet pet) {
+        this.pet = pet;
     }
 
     public int getYear() {
