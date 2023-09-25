@@ -20,8 +20,8 @@ public class PersonList {
         // en este caso, obtenemos la ruta absoluta
         File projectDir = new File(System.getProperty("user.dir"));
         dataFolder = new File(projectDir+"/data");
-        result = new File(dataFolder+"result.txt");
-        jsonFile = new File(dataFolder+"people.json");
+        result = new File(dataFolder+"/result.csv");
+        jsonFile = new File(dataFolder+"/people.json");
     }
     // por que es que esto manda esta excepcion?
     public void createResources() throws IOException {
@@ -47,10 +47,12 @@ public class PersonList {
         // el lenguaje (en este caso Java) con la fuente de informacion.
         FileOutputStream fos = new FileOutputStream(result);// esto es susceptible de lanzar una filenotfoundexception
         //fuente de la informacion
-        // definir el formato
+        // definir el formato con el que se guarda la informacion
         String data = "";
         for (int i = 0; i < people.size(); i++) {
-            data += people.get(i).getName() + ","+ people.get(i).getID()+ ","+people.get(i).getYear() + "\n";
+            data += people.get(i).getName() + ","+
+                    people.get(i).getID()+ ","+
+                    people.get(i).getYear() + "\n";
         }
         //BufferedWriter --> escribe la informacion. para funcionar necesita
         // el outputstream --> que es un empaquetador de la informacion, prepara el recurso donde queremos escribir.
@@ -69,7 +71,7 @@ public class PersonList {
         String content = "";
         String line = "";
         while ( (line = reader.readLine()) != null){
-            content += line;
+            content = line;
             // atributo de los strings que me permite crear arreglos
             // el split recibe un delimitador, cada elemento separado por la coma
             // ira en un indice del arreglo.
@@ -93,7 +95,8 @@ public class PersonList {
         Gson gson = new Gson();
 
         FileOutputStream fos = new FileOutputStream(jsonFile);// esto es susceptible de lanzar una filenotfoundexception
-
+        // fuente de la informacion
+        // definir el formato con el que se guarda la informacion
         String data = gson.toJson(people);
         BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(fos));
         writer.write(data); // susceptible de lanzar una IOException
@@ -104,10 +107,11 @@ public class PersonList {
     public void loadFromGson() throws IOException {
         Gson gson = new Gson();
         FileInputStream fis = new FileInputStream(jsonFile);
+        BufferedReader reader =
+                new BufferedReader(new InputStreamReader(fis));
 
-        BufferedReader reader = new BufferedReader(new InputStreamReader(fis));
         String content = "";
-        String line = "";
+        String line;
         while ( (line = reader.readLine()) != null){
             content += line;
         }
@@ -115,9 +119,17 @@ public class PersonList {
         reader.close();
         Person[] persons = gson.fromJson(content, Person[].class);
         people = Arrays.asList(persons);
-       /* for (Person p: persons) {
-
-        }*/
+    }
+    public String print(){
+        String msg = "";
+        // una pregunta, se hace + p por lo que el objeto
+        // person tiene un toString?
+        // intellij lo detecta de manera automatica?
+        for (Person p:
+             people) {
+            msg += p + ", ";
+        }
+        return msg;
     }
 }
 

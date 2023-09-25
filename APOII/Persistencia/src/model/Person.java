@@ -3,12 +3,12 @@ package model;
 public class Person {
     private String name;
     private String ID;
-    private int year;
+    private int years;
     private Pet pet;
-    public Person(String name, String ID, int year){
+    public Person(String name, String ID, int years){
         this.name = name;
         this.ID = ID;
-        this.year = year;
+        this.years = years;
     }
 
     public Pet getPet() {
@@ -20,11 +20,11 @@ public class Person {
     }
 
     public int getYear() {
-        return year;
+        return years;
     }
 
     public void setYear(int year) {
-        this.year = year;
+        this.years = year;
     }
 
     public String getName() {
@@ -44,6 +44,6 @@ public class Person {
     }
 
     public String toString(){
-        return "Name: "+ getName() + " ID: "+ getID();
+        return "Name: "+ getName() + " ID: "+ getID() + " years: " + getYear() + " Pet: " + getPet();
     }
 }

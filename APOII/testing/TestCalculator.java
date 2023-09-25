@@ -1,8 +1,7 @@
 import model.Calculator;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNotEquals;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class TestCalculator {
 
@@ -19,7 +18,9 @@ public class TestCalculator {
         // asercion / assert
         assertEquals(1, result);
     }
-
+    /*
+    * Positive test
+    * */
     @Test
     public void testFactorialOfFiveValue(){
         // inicializacion - setup de la prueba
