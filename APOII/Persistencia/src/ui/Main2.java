@@ -79,5 +79,7 @@ public class Main2 {
         }
         System.out.println("people from list to load: ");
         System.out.println(m.listToLoad.print());
+        System.out.println("listDirs():");
+        m.listToSave.listDirs();
     }
 }

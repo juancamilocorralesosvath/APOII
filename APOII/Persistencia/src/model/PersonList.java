@@ -131,6 +131,14 @@ public class PersonList {
         }
         return msg;
     }
+    public void listDirs(){
+        File[] files = dataFolder.listFiles();
+        for (int i = 0; i < files.length; i++) {
+            System.out.println(files[i].getName());
+            System.out.println(files[i].getParent());
+            System.out.println(files[i].getAbsolutePath());
+        }
+    }
 }
 
 
