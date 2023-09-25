@@ -4,11 +4,10 @@ import com.google.gson.Gson;
 
 import java.io.*;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 public class PersonList {
-    private List<Person> people;
+    private ArrayList<Person> people;
     private File dataFolder;
     private File result;
     private File jsonFile;
@@ -85,7 +84,7 @@ public class PersonList {
         return people;
     }
 
-    public void setPeople(List<Person> people) {
+    public void setPeople(ArrayList<Person> people) {
         this.people = people;
     }
     public void saveToGson() throws IOException {
@@ -117,8 +116,9 @@ public class PersonList {
         }
         // cierro el proceso
         reader.close();
-        Person[] persons = gson.fromJson(content, Person[].class);
-        people = Arrays.asList(persons);
+        //Person[] persons = gson.fromJson(content, Person[].class);
+        //people = Arrays.asList(persons);
+        people = gson.fromJson(content, people.getClass());
     }
     public String print(){
         String msg = "";
