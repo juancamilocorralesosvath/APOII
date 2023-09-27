@@ -7,9 +7,10 @@ public class PersonSorting implements Comparable<PersonSorting>{
     private Calendar date;
     private int years;
 
-    public PersonSorting(String name, int years) {
+    public PersonSorting(String name, int years, Calendar date) {
         this.name = name;
         this.years = years;
+        this.date = date;
     }
 
     public String getName() {
@@ -38,6 +39,11 @@ public class PersonSorting implements Comparable<PersonSorting>{
 
     @Override
     public int compareTo(PersonSorting person) {
-        return this.years - person.getYears();
+        int result;
+        result = this.name.compareTo(person.getName());
+        if(result == 0){
+            result = this.years - person.getYears();
+        }
+        return result;
     }
 }
