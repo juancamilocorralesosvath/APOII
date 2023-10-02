@@ -51,5 +51,56 @@ public class Main3 {
         for (int i = 0; i < list.size(); i++) {
             System.out.println(list.get(i));
         }
+
+        /*
+            2 OCTUBRE 2023
+            INSERTION SORT
+         */
+        ArrayList<Integer> listNums = new ArrayList<>();
+        listNums.add(7);
+        listNums.add(4);
+        listNums.add(3);
+        listNums.add(12);
+        listNums.add(13);
+        listNums.add(-2);
+
+        ArrayList<Integer> numsSorted = sorting.insertionSort(listNums);
+
+        for (int i = 0; i < numsSorted.size(); i++) {
+            System.out.println(numsSorted.get(i) + " ");
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     }
 }
