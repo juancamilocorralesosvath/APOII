@@ -19,6 +19,7 @@ public class BinarySearchMain {
 
         System.out.println("gracias Dios si esto funciona: ");
         System.out.println(binarySearch.binaryRecursion(arr, 5));
+        System.out.println("Gracias Dios!");
 
     }
 }
