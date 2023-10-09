@@ -4,6 +4,11 @@ import model.BinarySearch;
 
 import java.util.ArrayList;
 public class BinarySearchMain {
+
+    /*
+    * OJO:
+    * Para poder hacer busqueda binaria el arreglo debe estar ordenado (podemos usar los metodos que hemos visto en clase)
+    * */
     public static void main(String[] args) {
         ArrayList<Integer> arr = new ArrayList<>();
         arr.add(-2);
