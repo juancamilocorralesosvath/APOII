@@ -9,6 +9,7 @@
       <sourceFolder url="file://$MODULE_DIR$/APOII/Persistencia/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/APOII/Sorting/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/APOII/binarySearch/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/demo/src" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
@@ -29,5 +30,7 @@
       </library>
     </orderEntry>
     <orderEntry type="library" name="gson-2.10.1" level="project" />
+    <orderEntry type="library" name="maven-wrapper" level="project" />
+    <orderEntry type="library" name="openjfx.javafx.base" level="project" />
   </component>
 </module>
