@@ -1,11 +1,8 @@
-package controller;
+package com.example.demo.controller;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import javafx.fxml.FXMLLoader;
-import model.User;
-
-import java.util.ArrayList;
+import com.example.demo.model.User;
 
 // vamos a volver esta clase un singleton
 public class UserController {

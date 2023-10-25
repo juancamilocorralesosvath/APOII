@@ -24,11 +24,14 @@ public class HelloApplication extends Application {
             Stage stage = new Stage();
             stage.setTitle("Hello World!");
             stage.setScene(scene);
+            stage.setOnCloseRequest(windowEvent -> {
+                HelloController controller = fxmlLoader.getController();
+                controller.setIslive(false);
+            });
             stage.show();
         }catch (IOException e){
             e.printStackTrace();
         }
-
     }
 
     public static void main(String[] args) {
