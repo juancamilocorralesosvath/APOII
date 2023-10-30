@@ -37,3 +37,4 @@ build/
 
 ### Mac OS ###
 .DS_Store
+/openjfx-21.0.1_windows-x64_bin-sdk/
