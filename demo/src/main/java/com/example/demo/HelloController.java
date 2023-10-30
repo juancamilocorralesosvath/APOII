@@ -1,6 +1,6 @@
 package com.example.demo;
 
-import com.example.demo.controller.UserController;
+import com.example.demo.model.User;
 import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -10,11 +10,9 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextArea;
-import javafx.scene.control.cell.PropertyValueFactory;
-
-import com.example.demo.model.User;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
+
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -35,11 +33,10 @@ public class HelloController implements Initializable {
     private TableColumn<User, String> idTC;
     @FXML
     private TableColumn<User, Integer> ageTC;
+
     @FXML
     private Canvas canvas;
-    @FXML
     private GraphicsContext graphicsContext;
-    @FXML
     private Rectangle rectangle;
     private int posX;
     private int posY;
@@ -100,24 +97,6 @@ public class HelloController implements Initializable {
                         }
                     }
                 }).start();
-
-        posX = 50;
-        isAlive = true;
-        graphicsContext = canvas.getGraphicsContext2D();
-        // ojo: la clase Thread me permite tener más de un hilo de procesos. Para poder trabajar con concurrencia.
-
-        new Thread(
-                () -> {
-                    // entonces, hay que tener cuidado, porque vimos que asi yo cierre la ventana principal
-                    // no acabo con los diferentes hilos que yo creo. Debo implementar alguna manera de terminar
-                    // mis procesos (hilos).
-                    while(isAlive){
-                        //System.out.println("hello from thread controller");
-                        graphicsContext.setFill(Color.rgb(0, 0, 0));
-                        graphicsContext.fillRect(50, 50, 100, 100);
-                    }
-                }
-        ).start();
 
     }
 

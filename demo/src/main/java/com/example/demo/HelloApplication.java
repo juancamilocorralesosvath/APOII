@@ -1,6 +1,5 @@
 package com.example.demo;
 
-import com.example.demo.ui.Sum;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -35,13 +34,7 @@ public class HelloApplication extends Application {
             e.printStackTrace();
         }
     }
-
     public static void main(String[] args) {
-        Sum add = (int x, int y) -> {
-            System.out.println("suma");
-            return x+y;
-        };
-        System.out.println(""+ add.sum(5,6));
         launch();
     }
 }

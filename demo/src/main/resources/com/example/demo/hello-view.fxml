@@ -13,7 +13,6 @@
 
 
 <!--
->>>>>>> 5b71c4e849520cc9d5fe6e93ea30890278635f7e
 <VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
       fx:controller="com.example.demo.HelloController">
   <padding>
@@ -30,12 +29,15 @@
   <Button text="Add user" onAction="#onHelloButtonClick"/>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   <AnchorPane>
     <Canvas fx:id="canvas">
 
     </Canvas>
   </AnchorPane>
 
+=======
+>>>>>>> parent of c61a58a (changes?don´t remember what i did)
 </VBox>
 =======
 
