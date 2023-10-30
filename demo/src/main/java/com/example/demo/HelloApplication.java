@@ -27,13 +27,13 @@ public class HelloApplication extends Application {
             stage.setScene(scene);
             stage.setOnCloseRequest(windowEvent -> {
                 HelloController controller = fxmlLoader.getController();
-                controller.setRunning(false);
+
+                controller.setIslive(false);
             });
             stage.show();
         }catch (IOException e){
             e.printStackTrace();
         }
-
     }
 
     public static void main(String[] args) {

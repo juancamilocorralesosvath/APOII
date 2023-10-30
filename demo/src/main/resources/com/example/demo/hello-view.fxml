@@ -10,6 +10,10 @@
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.canvas.Canvas?>
+
+
+<!--
+>>>>>>> 5b71c4e849520cc9d5fe6e93ea30890278635f7e
 <VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
       fx:controller="com.example.demo.HelloController">
   <padding>
@@ -25,6 +29,7 @@
   </TableView>
   <Button text="Add user" onAction="#onHelloButtonClick"/>
 
+<<<<<<< HEAD
   <AnchorPane>
     <Canvas fx:id="canvas">
 
@@ -32,3 +37,15 @@
   </AnchorPane>
 
 </VBox>
+=======
+
+</VBox >
+-->
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+            prefHeight="400.0" prefWidth="600.0"
+            xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.demo.HelloController" >
+  <children>
+    <Canvas fx:id="canvas" height="377.0" layoutX="14.0" layoutY="14.0" width="577.0" focusTraversable="true" />
+  </children>
+</AnchorPane>

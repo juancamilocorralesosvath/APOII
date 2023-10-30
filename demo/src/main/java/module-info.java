@@ -5,7 +5,9 @@ module com.example.demo {
                             
     opens com.example.demo to javafx.fxml;
     exports com.example.demo;
+
     // para que todas las clases de este paquete sean visibles al framework de javafx
-    exports controller;
-    exports model;
+    exports com.example.demo.controller;
+    opens com.example.demo.controller;
+    exports com.example.demo.model;
 }

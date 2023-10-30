@@ -1,6 +1,7 @@
 package com.example.demo;
 
-import controller.UserController;
+import com.example.demo.controller.UserController;
+import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.canvas.Canvas;
@@ -10,9 +11,10 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.cell.PropertyValueFactory;
-import javafx.scene.paint.Color;
-import model.User;
 
+import com.example.demo.model.User;
+import javafx.scene.paint.Color;
+import javafx.scene.shape.Rectangle;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -37,15 +39,18 @@ public class HelloController implements Initializable {
     private Canvas canvas;
     @FXML
     private GraphicsContext graphicsContext;
-    private int rectPosX;
-    private boolean isRunning;
+    @FXML
+    private Rectangle rectangle;
+    private int posX;
+    private int posY;
+    private boolean upPressed;
+    private boolean downPressed;
+    private boolean leftPressed;
+    private boolean rightPressed;
+    private boolean isAlive;
 
-    public boolean isRunning() {
-        return isRunning;
-    }
-
-    public void setRunning(boolean running) {
-        isRunning = running;
+    public void setIslive(boolean isAlive){
+        this.isAlive = isAlive;
     }
 
     @FXML
@@ -60,14 +65,44 @@ public class HelloController implements Initializable {
         // la manera en como se llama el metodo es muy similar a cuando creamos una hashtable, pues me parece a mi.
         // porque los tipos de datos se lo indicamos con generics y java infiere los tipos de datos
         // cuando nosotros instanciamos cada una de las variables (nameTC, idTC, ageTC)
-        nameTC.setCellValueFactory(new PropertyValueFactory<>("name"));
-        idTC.setCellValueFactory(new PropertyValueFactory<>("id"));
-        ageTC.setCellValueFactory(new PropertyValueFactory<>("years"));
 
-        studentsTableView.setItems(UserController.getInstance().getStudents());
+        /*
+        * esto es lo de la clase pasada
+        * nameTC.setCellValueFactory(new PropertyValueFactory<>("name"));
+          idTC.setCellValueFactory(new PropertyValueFactory<>("id"));
+          ageTC.setCellValueFactory(new PropertyValueFactory<>("years"));
+          studentsTableView.setItems(UserController.getInstance().getStudents());
 
-        rectPosX = 50;
-        isRunning = true;
+        * */
+        initActions();
+        posX = 50;
+        posY = 50;
+
+        graphicsContext = canvas.getGraphicsContext2D();
+        rectangle = new Rectangle(posX, posY, 50, 50);
+        isAlive = true;
+
+        new Thread(
+                ()->{
+                    while(isAlive){
+                        Platform.runLater(
+                                () -> {
+                                    // actualizar posicion
+                                    updateRec();
+                                    // dibujar
+                                    paint();
+                                }
+                        );
+                        try {
+                            Thread.sleep(10);
+                        }catch (InterruptedException e){
+                            e.printStackTrace();
+                        }
+                    }
+                }).start();
+
+        posX = 50;
+        isAlive = true;
         graphicsContext = canvas.getGraphicsContext2D();
         // ojo: la clase Thread me permite tener más de un hilo de procesos. Para poder trabajar con concurrencia.
 
@@ -76,7 +111,7 @@ public class HelloController implements Initializable {
                     // entonces, hay que tener cuidado, porque vimos que asi yo cierre la ventana principal
                     // no acabo con los diferentes hilos que yo creo. Debo implementar alguna manera de terminar
                     // mis procesos (hilos).
-                    while(isRunning){
+                    while(isAlive){
                         //System.out.println("hello from thread controller");
                         graphicsContext.setFill(Color.rgb(0, 0, 0));
                         graphicsContext.fillRect(50, 50, 100, 100);
@@ -85,4 +120,51 @@ public class HelloController implements Initializable {
         ).start();
 
     }
+
+    private void initActions(){
+        canvas.setOnKeyPressed(keyEvent -> {
+            switch (keyEvent.getCode()){
+                case UP -> upPressed = true;
+                case DOWN -> downPressed = true;
+                case LEFT -> leftPressed = true;
+                case RIGHT -> rightPressed = true;
+            }
+        });
+
+        canvas.setOnKeyReleased(keyEvent -> {
+            switch (keyEvent.getCode()){
+                case UP -> upPressed = false;
+                case DOWN -> downPressed = false;
+                case LEFT -> leftPressed = false;
+                case RIGHT -> rightPressed = false;
+            }
+        });
+    }
+    private void updateRec(){
+        if (upPressed){
+            posY -= 5;
+        }
+        if(downPressed){
+            posY += 5;
+        }
+        if (leftPressed) posX -= 5;
+        if (rightPressed) posX += 5;
+    }
+    private void paint(){
+        graphicsContext.clearRect(0, 0, canvas.getWidth(), canvas.getHeight());
+        graphicsContext.setFill(Color.rgb(255, 0, 0));
+        graphicsContext.fillRect(posX, posY, rectangle.getHeight(), rectangle.getWidth());
+    }
 }
+
+
+
+
+
+
+
+
+
+
+
+
