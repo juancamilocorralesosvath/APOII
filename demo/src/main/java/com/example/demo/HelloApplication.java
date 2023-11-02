@@ -10,7 +10,8 @@ import java.io.IOException;
 public class HelloApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
-        openWindow("hello-view.fxml");
+        // openWindow("hello-view.fxml");
+        openWindow("avatar-view.fxml");
     }
     // vamos a renderizar cualquier archivo xml que yo quiera abrir.
     // para poder abrir multiples ventanas (una despues de otra)

@@ -6,12 +6,13 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
+<?import javafx.scene.canvas.Canvas?>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+            xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
             fx:controller="com.example.demo.controller.AvatarController"
             prefHeight="400.0" prefWidth="600.0">
     <children>
-
+        <Canvas fx:id="canvas" height="384.0" layoutX="14.0" layoutY="14.0" width="582.0" focusTraversable="true" />
     </children>
-
 </AnchorPane>

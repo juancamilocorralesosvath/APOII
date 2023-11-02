@@ -6,7 +6,7 @@ import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.paint.Color;
 
-public class ScreenA {
+public class ScreenA extends BaseScreen {
     private Canvas canvas;
     private GraphicsContext graphicsContext;
     private Avatar avatar;
@@ -16,6 +16,7 @@ public class ScreenA {
         this.graphicsContext = canvas.getGraphicsContext2D();
         this.avatar = new Avatar(this.canvas);
     }
+    @Override
     public void paint(){
         graphicsContext.setFill(Color.BLACK);
         graphicsContext.fillRect(0, 0, canvas.getWidth(), canvas.getHeight());
