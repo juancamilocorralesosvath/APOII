@@ -8,6 +8,17 @@ public class MyVector {
         this.posX = posX;
         this.posY = posY;
     }
+    public void normalize(){
+        double normal = Math.sqrt(Math.pow(posX, 2) + Math.pow(posY, 2));
+        if (normal != 0 ){
+            posX /= normal;
+            posY /= normal;
+        }
+    }
+    public void setSpeed(int speed){
+        posX *= speed;
+        posY *= speed;
+    }
 
     public double getPosX() {
         return posX;

@@ -36,10 +36,14 @@ public class Avatar {
             idle.add(image);
         }
 
-        for (int i = 0; i <= 3; i++) {
+        for (int i = 0; i <= 5; i++) {
             Image image = new Image(getClass().getResourceAsStream("/animations/hero/run/adventurer-run-0"+i+".png"));
-            idle.add(image);
+            run.add(image);
         }
+    }
+
+    public MyVector getPosition() {
+        return position;
     }
 
     public void paint(){
